@@ -4,16 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home.component';
-import { PostsPageComponent } from './posts-page.component';
+import { HomeComponent } from './home/home.component';
+import { PostsPageComponent } from './posts-page/posts-page.component';
 
-import {AppRoutingModule} from "./app-routing.module";
+import { AppRoutingModule } from "./app-routing.module";
+import { SplashComponent } from './splash/splash.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PostsPageComponent
+    PostsPageComponent,
+    SplashComponent
   ],
   imports: [
     BrowserModule,
