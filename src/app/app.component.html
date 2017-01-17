@@ -1,7 +1,15 @@
-<header>
-  <nav>
-    <a routerLink='/' routerLinkActive="active">Home</a>
-    <a routerLink='/posts' routerLinkActive="active">Posts</a>
-  </nav>
+<header class="unicorn-dark-theme">
+    <md-toolbar color="primary">
+
+      <nav>
+        <button md-button routerLink='/' routerLinkActive="active">Home</button>
+        <button md-button routerLink='/posts' routerLinkActive="active">Posts</button>
+      </nav>
+
+      <!-- This fills the remaining space of the current row -->
+      <!--<span class="example-fill-remaining-space"></span>-->
+
+      <!--<span>Right Aligned Text</span>-->
+    </md-toolbar>
 </header>
 <router-outlet></router-outlet>

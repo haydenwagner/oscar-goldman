@@ -6,9 +6,11 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PostsPageComponent } from './posts-page/posts-page.component';
+import { SplashComponent } from './splash/splash.component';
 
 import { AppRoutingModule } from "./app-routing.module";
-import { SplashComponent } from './splash/splash.component';
+
+import { MaterialModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { SplashComponent } from './splash/splash.component';
     BrowserModule,
     FormsModule,
     HttpModule,
+    MaterialModule.forRoot(),
     AppRoutingModule
   ],
   providers: [],
