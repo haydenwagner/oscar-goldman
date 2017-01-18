@@ -1,1 +1,13 @@
-<p>Posts Page Component</p>
+<div class="main-view-container" id="posts-page-container">
+  <h1>Posts</h1>
+  <div *ngFor="let postLinkElement of postLinkElements" class="postLinkElement">
+    <h3 class="title">{{ postLinkElement.title }}</h3>
+
+    <p class="preview">{{ postLinkElement.preview }}</p>
+
+    <div class="metadata">
+      <p>{{ postLinkElement.author }} - {{ postLinkElement.pubDate }}</p>
+    </div>
+
+  </div>
+</div>

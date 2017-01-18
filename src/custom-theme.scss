@@ -1,21 +1,23 @@
-@import '../node_modules/@angular/material/core/theming/_all-theme';
-// Plus imports for other components in your app.
+//@import '../node_modules/@angular/material/core/theming/_all-theme';
+//// Plus imports for other components in your app.
+//
+//// Include the base styles for Angular Material core. We include this here so that you only
+//// have to load a single css file for Angular Material in your app.
+//@include md-core();
+//
+//
+///* You can add global styles to this file, and also import other style files */
+//.unicorn-dark-theme {
+//  $dark-primary: md-palette($md-blue-grey);
+//  $dark-accent:  md-palette($md-green, A200, A100, A400);
+//  $dark-warn:    md-palette($md-deep-orange);
+//
+//  $dark-theme: md-dark-theme($dark-primary, $dark-accent, $dark-warn);
+//
+//  @include angular-material-theme($dark-theme);
+//}
 
-// Include the base styles for Angular Material core. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-@include md-core();
-
-
-/* You can add global styles to this file, and also import other style files */
-.unicorn-dark-theme {
-  $dark-primary: md-palette($md-blue-grey);
-  $dark-accent:  md-palette($md-green, A200, A100, A400);
-  $dark-warn:    md-palette($md-deep-orange);
-
-  $dark-theme: md-dark-theme($dark-primary, $dark-accent, $dark-warn);
-
-  @include angular-material-theme($dark-theme);
-}
+@import '~@angular/material/core/theming/prebuilt/purple-green.css';
 
 .example-fill-remaining-space {
   // This fills the remaining space, by using flexbox.
@@ -26,4 +28,10 @@
 body, html{
   padding: 0;
   margin: 0;
+}
+
+.main-view-container{
+  width: 800px;
+  margin:0 auto;
+  padding: 2.1em;
 }
