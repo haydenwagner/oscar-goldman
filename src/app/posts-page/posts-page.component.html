@@ -1,13 +1,17 @@
 <div class="main-view-container" id="posts-page-container">
   <h1>Posts</h1>
-  <div *ngFor="let postLinkElement of postLinkElements" class="postLinkElement">
-    <h3 class="title">{{ postLinkElement.title }}</h3>
-
-    <p class="preview">{{ postLinkElement.preview }}</p>
-
-    <div class="metadata">
-      <p>{{ postLinkElement.author }} - {{ postLinkElement.pubDate }}</p>
+  <div  *ngFor="let post of posts" class="card">
+    <!--<div class="card-header">-->
+      <!--Featured-->
+    <!--</div>-->
+    <div class="card-block">
+      <h4 class="card-title">{{ post.title }}</h4>
+      <p class="card-text">{{ post.preview }}</p>
+      <p *ngIf="post.markdown" [innerHTML]="post.markdown"></p>
+      <a [routerLink]="['/post', post.id]" class="btn btn-primary">Read {{post.id}}</a>
     </div>
-
+    <div class="card-footer text-muted">
+      {{ post.author }} - {{ post.pubDate }}
+    </div>
   </div>
 </div>

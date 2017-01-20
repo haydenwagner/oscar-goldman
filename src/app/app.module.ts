@@ -11,13 +11,15 @@ import { SplashComponent } from './splash/splash.component';
 import { AppRoutingModule } from "./app-routing.module";
 
 import { MaterialModule } from '@angular/material';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PostsPageComponent,
-    SplashComponent
+    SplashComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

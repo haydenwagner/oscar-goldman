@@ -1,15 +1,18 @@
 #posts-page-container{
-  .postLinkElement{
-    border: 2px solid grey;
-    margin: 10px 0;
-    padding: 10px;
-
-    .metadata{
-      font-weight: lighter;
-
-      p{
-        margin: 0;
-      }
-    }
+  //.postLinkElement{
+  //  border: 2px solid grey;
+  //  margin: 10px 0;
+  //  padding: 10px;
+  //
+  //  .metadata{
+  //    font-weight: lighter;
+  //
+  //    p{
+  //      margin: 0;
+  //    }
+  //  }
+  //}
+  .card{
+    margin-bottom: 15px;
   }
 }

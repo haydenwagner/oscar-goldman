@@ -1,7 +1,7 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async, inject } from '@angular/core/testing';
-import { PostService } from './post.service';
+import { PostService } from './posts.service';
 
 describe('PostService', () => {
   beforeEach(() => {

@@ -1,8 +1,7 @@
 import{ Component, OnInit } from '@angular/core';
 
-
-import { PostLinkElement } from '../post-link-element';
-import { PostService } from '../post.service';
+import { Post } from '../post';
+import { PostService } from '../posts.service';
 
 @Component({
   selector: 'posts-page',
@@ -11,7 +10,7 @@ import { PostService } from '../post.service';
   providers: [PostService]
 })
 export class PostsPageComponent implements OnInit {
-  postLinkElements: PostLinkElement[];
+  posts: Post[];
 
   constructor(private postService: PostService){ }
 
@@ -20,7 +19,7 @@ export class PostsPageComponent implements OnInit {
   }
 
   getPosts(): void{
-    this.postService.getPosts().then(posts => this.postLinkElements = posts);
+    this.postService.getPosts().subscribe(posts => this.posts = posts);
   }
 
 }
