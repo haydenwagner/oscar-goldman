@@ -1,14 +1,13 @@
 #splash-container{
   .splash-elements{
-    width: 400px;
-    margin: 0 auto 2em;
+    //width: 400px;
+    //margin: 0 auto 2em;
 
     #image-self{
-      width: 200px;
-      height: 200px;
-      display: inline-block;
-      overflow: hidden;
-      border-radius: 100%;
+      //width: 200px;
+      //height: 200px;
+      //display: inline-block;
+      //overflow: hidden;
 
       img{
         width: 100%;
@@ -16,7 +15,8 @@
     }
 
     button{
-      display: inline-block;
+      //display: inline-block;
+      width: 100%;
     }
   }
 }

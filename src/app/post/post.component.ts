@@ -25,10 +25,11 @@ export class PostComponent implements OnInit {
   }
 
   getPost( post_id: number ): void{
-    this.postService.getPost( post_id ).subscribe(p => {
-      console.log(p);
-      this.post = p;
-    });
+    // this.postService.getPost( post_id ).subscribe(p => {
+    //   console.log(p);
+    //   this.post = p;
+    // });
+    this.post = this.postService.getPost( post_id );
   }
 
 }

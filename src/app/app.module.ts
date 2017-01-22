@@ -12,6 +12,7 @@ import { AppRoutingModule } from "./app-routing.module";
 
 import { MaterialModule } from '@angular/material';
 import { PostComponent } from './post/post.component';
+import { NavbarModule } from './navbar/navbar.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PostComponent } from './post/post.component';
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    NavbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
