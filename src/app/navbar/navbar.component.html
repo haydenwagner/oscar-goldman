@@ -1,32 +1,28 @@
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <!--<div class="clearfix">-->
-    <!--<button (click)="isCollapsed = !isCollapsed"-->
-      <!--class="navbar-toggler navbar-toggler-right" type="button"-->
-      <!--aria-controls="bd-main-nav"-->
-      <!--aria-label="Toggle navigation">-->
-        <!--{{menuIcon}}-->
-    <!--</button>-->
 
-  <button (click)="isCollapsed = !isCollapsed" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="hw-main-nav" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
 
-    <a (click)="isCollapsed = true" class="navbar-brand" [routerLink]="[brandMenu.path]">
-      {{brandMenu.title}}
-    </a>
-  <!--</div>-->
+    <div class="container">
 
-  <div class="collapse navbar-collapse" id="hw-main-nav"
-  [attr.aria-expanded]="!isCollapsed" [ngClass]="{collapse: isCollapsed}">
-    <ul class="navbar-nav mr-auto">
-      <!--<li (click)="isCollapsed = true" class="nav-item" routerLinkActive="active">-->
-        <!--<a class="navbar-brand hidden-xs-down" [routerLink]="[brandMenu.path]">{{brandMenu.title}}</a>-->
-      <!--</li>-->
-      <li (click)="isCollapsed = true" *ngFor="let menuItem of menuItems"
-        class="nav-item" routerLinkActive="active"
-        [ngClass]="getMenuItemClasses(menuItem)">
-        <a class="nav-item nav-link" [routerLink]="[menuItem.path]" routerLinkActive="active">{{menuItem.title}}</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+      <div class="d-flex justify-content-between hidden-lg-up">
+        <a (click)="isCollapsed = true" class="navbar-brand" [routerLink]="[brandMenu.path]">
+          {{brandMenu.title}}
+        </a>
+
+        <button (click)="isCollapsed = !isCollapsed" class="navbar-toggler" type="button" aria-controls="hw-main-nav" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+
+    <div class="collapse navbar-collapse" id="hw-main-nav" [attr.aria-expanded]="!isCollapsed" [ngClass]="{collapse: isCollapsed}">
+      <ul class="navbar-nav mr-auto">
+        <li (click)="isCollapsed = true" *ngFor="let menuItem of menuItems" class="nav-item" routerLinkActive="active" [ngClass]="getMenuItemClasses(menuItem)">
+          <a class="nav-item nav-link" [routerLink]="[menuItem.path]" routerLinkActive="active">{{menuItem.title}}</a>
+        </li>
+      </ul>
+    </div>
+
+</div>
+
+  </nav>
+
