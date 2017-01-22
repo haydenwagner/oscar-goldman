@@ -1,8 +1,9 @@
-<div class="main-view-container" id="posts-container">
+<div class="container" id="post-element">
+  <div class="col-lg-8 offset-lg-2">
 
-      <h4>{{ post?.id }} : {{ post?.title }}</h4>
-      <p><small>{{post?.author}} - {{ post?.pubDate }}</small></p>
+      <h1>{{ post?.title }}</h1>
+      <p>{{post?.author}} - {{ post?.pubDate }}</p>
       <p class="lead">{{ post?.preview }}</p>
-      <p *ngIf="post?.markdown" [innerHTML]="post?.markdown"></p>
-
+      <div id="content" *ngIf="post?.markdown" [innerHTML]="post?.markdown"></div>
+  </div>
 </div>

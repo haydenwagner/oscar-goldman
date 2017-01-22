@@ -1,0 +1,12 @@
+@import "../../assets/temp/bootstrap/scss/variables";
+@import "../../assets/temp/bootstrap/scss/mixins";
+
+#post-element {
+  margin: 2em auto 10em;
+
+  #content {
+    img {
+      @include img-fluid;
+    }
+  }
+}

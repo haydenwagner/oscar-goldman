@@ -1,17 +1,18 @@
-<div class="main-view-container" id="posts-page-container">
-  <h1>Posts</h1>
-  <div  *ngFor="let post of posts" class="card">
-    <!--<div class="card-header">-->
-      <!--Featured-->
-    <!--</div>-->
-    <div class="card-block">
-      <h4 class="card-title">{{ post.title }}</h4>
-      <p class="card-text">{{ post.preview }}</p>
-      <!--<p *ngIf="post.markdown" [innerHTML]="post.markdown"></p>-->
-      <a [routerLink]="['/post', post.id]" class="btn btn-primary">Read {{post.id}}</a>
+<div class="container" id="posts-page-elements">
+    <div class="col-lg-8 offset-lg-2">
+      <h1>Posts</h1>
+      <div  *ngFor="let post of posts" class="card">
+        <!--<div class="card-header">-->
+          <!--Featured-->
+        <!--</div>-->
+        <div class="card-block">
+          <h4 class="card-title">{{ post.title }}</h4>
+          <p class="card-text">{{ post.preview }}</p>
+          <a [routerLink]="['/post', post.id]" class="btn btn-primary">Read {{post.id}}</a>
+        </div>
+        <div class="card-footer text-muted">
+          {{ post.author }} - {{ post.pubDate }}
+        </div>
+      </div>
     </div>
-    <div class="card-footer text-muted">
-      {{ post.author }} - {{ post.pubDate }}
-    </div>
-  </div>
 </div>

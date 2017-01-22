@@ -12,5 +12,10 @@
       <!--&lt;!&ndash;<span>Right Aligned Text</span>&ndash;&gt;-->
     <!--</md-toolbar>-->
 <!--</header>-->
+
 <navbar></navbar>
+<div class="loading-overlay" *ngIf="loading">
+  Loading...
+  <md-progress-bar mode="indeterminate"></md-progress-bar>
+</div>
 <router-outlet></router-outlet>

@@ -1,17 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Post } from '../post';
 import { PostService } from '../posts.service';
 
+//view encapsulation set to 'none' to allow for styling of
+//innerHTML content (the post markdown)
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss'],
-  providers: [PostService]
+  providers: [PostService],
+  encapsulation: ViewEncapsulation.None
 })
 export class PostComponent implements OnInit {
-  post: Post[];
+  //post: Post[];
+  post;
 
   constructor(
     private postService: PostService,
