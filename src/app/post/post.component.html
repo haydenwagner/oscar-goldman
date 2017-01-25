@@ -4,6 +4,15 @@
       <h1>{{ post?.title }}</h1>
       <p>{{post?.author}} - {{ post?.pubDate }}</p>
       <p class="lead">{{ post?.preview }}</p>
+      <div class="main-points" *ngIf="post?.mainPoints">
+        <h2>Main Points</h2>
+        <ul>
+          <li *ngFor="let point of post?.mainPoints" [innerHTML]="point"></li>
+        </ul>
+      </div>
+
       <div id="content" *ngIf="post?.markdown" [innerHTML]="post?.markdown"></div>
+
   </div>
+
 </div>

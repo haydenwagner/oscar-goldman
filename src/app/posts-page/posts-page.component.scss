@@ -1,7 +1,22 @@
 #posts-page-elements{
   margin: 2em auto 0;
 
+  //.main-points{
+  //  li{
+  //    margin: 1em 0;
+  //  }
+  //}
+
   .card{
     margin-bottom: 1em;
+
+    .card-img-height-limiter{
+      max-height: 150px;
+      overflow: hidden;
+
+      img{
+        width: 100%;
+      }
+    }
   }
 }

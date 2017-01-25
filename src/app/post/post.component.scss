@@ -4,9 +4,23 @@
 #post-element {
   margin: 2em auto 10em;
 
+  .main-points{
+    margin: 2em 0;
+
+    li{
+      margin: 1em 0;
+    }
+  }
+
   #content {
     img {
       @include img-fluid;
+    }
+
+    figure{
+      video{
+        max-width:100%;
+      }
     }
   }
 }

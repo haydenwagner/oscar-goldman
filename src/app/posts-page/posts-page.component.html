@@ -5,10 +5,13 @@
         <!--<div class="card-header">-->
           <!--Featured-->
         <!--</div>-->
+        <div class="card-img-height-limiter">
+          <img *ngIf="post.cardImage" class="card-img-top" src="{{post.cardImage}}" alt="Card image cap">
+        </div>
         <div class="card-block">
-          <h4 class="card-title">{{ post.title }}</h4>
+          <a [routerLink]="['/post', post.id]"><h4 class="card-title">{{ post.title }}</h4></a>
           <p class="card-text">{{ post.preview }}</p>
-          <a [routerLink]="['/post', post.id]" class="btn btn-primary">Read {{post.id}}</a>
+          <a [routerLink]="['/post', post.id]" class="btn btn-primary float-right">Read Post</a>
         </div>
         <div class="card-footer text-muted">
           {{ post.author }} - {{ post.pubDate }}
