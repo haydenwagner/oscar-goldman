@@ -6,6 +6,6 @@ export class Post{
     public author: string,
     public preview: string,
     public pubDate: string,
-    public mainPoints: string,
+    public mainPoints: string[],
     public markdown: string) { }
 }

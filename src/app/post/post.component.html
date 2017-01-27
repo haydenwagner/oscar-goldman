@@ -4,12 +4,23 @@
       <h1>{{ post?.title }}</h1>
       <p>{{post?.author}} - {{ post?.pubDate }}</p>
       <p class="lead">{{ post?.preview }}</p>
-      <div class="main-points" *ngIf="post?.mainPoints">
-        <h2>Main Points</h2>
+
+
+    <!--<div class="main-points" *ngIf="post?.mainPoints">-->
+        <!--<h2>Main Points</h2>-->
+        <!--<ul>-->
+          <!--<li *ngFor="let point of post?.mainPoints" [innerHTML]="point"></li>-->
+        <!--</ul>-->
+      <!--</div>-->
+
+    <div class="main-points card" *ngIf="post?.mainPoints">
+      <h2 class="card-header card-inverse bg-info">Main Points</h2>
+      <div class="card-block">
         <ul>
-          <li *ngFor="let point of post?.mainPoints" [innerHTML]="point"></li>
+        <li *ngFor="let point of post?.mainPoints" [innerHTML]="point"></li>
         </ul>
       </div>
+    </div>
 
       <div id="content" *ngIf="post?.markdown" [innerHTML]="post?.markdown"></div>
 

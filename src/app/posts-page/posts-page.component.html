@@ -1,21 +1,42 @@
 <div class="container" id="posts-page-elements">
-    <div class="col-lg-8 offset-lg-2">
+    <div class="col-lg-10 offset-lg-1">
       <h1>Posts</h1>
-      <div  *ngFor="let post of posts" class="card">
-        <!--<div class="card-header">-->
-          <!--Featured-->
+
+
+      <!--<div  *ngFor="let post of posts" class="card">-->
+        <!--&lt;!&ndash;<div class="card-header">&ndash;&gt;-->
+          <!--&lt;!&ndash;Featured&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--<div class="card-img-height-limiter">-->
+          <!--<img *ngIf="post.cardImage" class="card-img-top" src="{{post.cardImage}}" alt="Card image cap">-->
         <!--</div>-->
-        <div class="card-img-height-limiter">
-          <img *ngIf="post.cardImage" class="card-img-top" src="{{post.cardImage}}" alt="Card image cap">
-        </div>
-        <div class="card-block">
-          <a [routerLink]="['/post', post.id]"><h4 class="card-title">{{ post.title }}</h4></a>
-          <p class="card-text">{{ post.preview }}</p>
-          <a [routerLink]="['/post', post.id]" class="btn btn-primary float-right">Read Post</a>
-        </div>
-        <div class="card-footer text-muted">
-          {{ post.author }} - {{ post.pubDate }}
-        </div>
-      </div>
+        <!--<div class="card-block">-->
+          <!--<a [routerLink]="['/post', post.id]"><h4 class="card-title">{{ post.title }}</h4></a>-->
+          <!--<p class="card-text">{{ post.preview }}</p>-->
+          <!--<a [routerLink]="['/post', post.id]" class="btn btn-primary float-right">Read Post</a>-->
+        <!--</div>-->
+        <!--<div class="card-footer text-muted">-->
+          <!--{{ post.author }} - {{ post.pubDate }}-->
+        <!--</div>-->
+      <!--</div>-->
+
+
+      <ul class="list-unstyled">
+        <li *ngFor="let post of posts" class="media mb-3">
+          <div class="img-size-limiter mr-3">
+            <img *ngIf="post.cardImage" class="d-flex" src="{{post?.cardImage}}" alt="Post image">
+          </div>
+          <div class="media-body">
+            <a [routerLink]="['/post', post.id]"><h5 class="mt-0 mb-1">{{ post?.title }}</h5></a>
+            {{ post?.preview }}
+
+            <div class="text-muted mt-2">
+              {{ post?.author }} - {{ post?.pubDate }} <a [routerLink]="['/post', post.id]" class="btn btn-primary float-right">Read Post</a>
+            </div>
+
+          </div>
+        </li>
+      </ul>
+
     </div>
 </div>

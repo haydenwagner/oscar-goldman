@@ -11,6 +11,8 @@ import { SplashComponent } from './splash/splash.component';
 import { AppRoutingModule } from "./app-routing.module";
 
 import { MaterialModule } from '@angular/material';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { PostComponent } from './post/post.component';
 import { NavbarModule } from './navbar/navbar.module';
 
@@ -27,6 +29,7 @@ import { NavbarModule } from './navbar/navbar.module';
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
+    NgbModule.forRoot(),
     AppRoutingModule,
     NavbarModule
   ],

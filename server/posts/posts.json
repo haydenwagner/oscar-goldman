@@ -24,7 +24,7 @@
     "cardImage":"../assets/temp/images/3/cmp_image-pan.jpg",
     "title": "Cross media publishing project",
     "author": "Hayden",
-    "preview": "An <strong>undergraduate group project</strong> which involved organizing and structuring information before publishing to multiple media",
+    "preview": "An undergraduate group project which involved organizing and structuring information before publishing to multiple media",
     "pubDate": "1/25/17",
     "mainPoints": [
       "This project's main goal was to improve the organization of a set of existing help documents that had been published by our school’s publishing center",
@@ -32,6 +32,19 @@
       "We used information schemas, xml markup and templating, and HTML and AJAX to create the project deliverables"
     ],
     "mdFileID":"a3"
+  },
+  {
+    "id":"4",
+    "cardImage":"../assets/temp/images/3/cmp_image-pan.jpg",
+    "title": "School of Media Sciences App",
+    "author": "Hayden",
+    "preview": "A digital publishing app I worked on in a co-op position at the Rochester Institute of Technology. The app features interactive articles and was made with an experimental Adobe publishing framework.",
+    "pubDate": "1/26/17",
+    "mainPoints": [
+      "I worked on this project over a ten week period with another student; we were advised by two of our professors from our program",
+      "Our main goal was to create an interactive application, using new Adobe software, that showcased the School of Media Sciences at RIT to potential students, current students, and alumni"
+    ],
+    "mdFileID":"a4"
   }
 ]
 

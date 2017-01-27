@@ -1,11 +1,41 @@
 @import "../../assets/temp/bootstrap/scss/variables";
 @import "../../assets/temp/bootstrap/scss/mixins";
 
+//@include media-breakpoint-up(sm) {
+//  html {
+//    font-size: 16px;
+//  }
+//}
+//
+//@include media-breakpoint-up(md) {
+//  html {
+//    font-size: 20px;
+//  }
+//}
+
+//@include media-breakpoint-up(lg) {
+//  html {
+//    font-size: 28px;
+//  }
+//}
+
 #post-element {
   margin: 2em auto 10em;
 
+  @include media-breakpoint-up(md) {
+      font-size: 18px;
+  }
+
   .main-points{
     margin: 2em 0;
+
+    .card-header{
+      color: white;
+    }
+
+    .card-block{
+      padding: 0 1.25rem 0 0;
+    }
 
     li{
       margin: 1em 0;
@@ -22,5 +52,16 @@
         max-width:100%;
       }
     }
+
+    //for any appstore links
+    .div_appstore-links{
+      img{
+        max-width: 135px;
+      }
+    }
+  }
+
+  mark, .mark{
+    background-color: mistyrose;
   }
 }
