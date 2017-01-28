@@ -17,7 +17,9 @@
 //  @include angular-material-theme($dark-theme);
 //}
 
-@import '~@angular/material/core/theming/prebuilt/purple-green.css';
+//@import '~@angular/material/core/theming/prebuilt/purple-green.css';
+
+
 
 .example-fill-remaining-space {
   // This fills the remaining space, by using flexbox.
@@ -25,8 +27,21 @@
   flex: 1 1 auto;
 }
 
+// Import theming functions
+@import '../node_modules/@angular/material/core/theming/theming';
+// Import your custom theme
+@import 'theme.scss';
+
 body, html{
   padding: 0;
   margin: 0;
 }
 
+.navbar{
+  background: md-color($primary, 700);
+}
+
+
+//.btn{
+//  color: $primary;
+//}
