@@ -34,10 +34,9 @@ export class PostService {
     {
       id:"2",
       cardImage:"../assets/temp/images/2/3_terminal-complete.jpg",
-      title: "Using Git Bash in the native WebStorm terminal",
+      title: "Make your WebStorm terminal great",
       author: "Hayden",
-      preview: `I use WebStorm as my IDE, and I use git-bash on Windows. WebStorm features an integrated terminal, 
-      but if you want to use the git-bash shell you need to configure the terminal settings differently.`,
+      preview: `Are you using Webstorm + git-bash + Windows? Integrate it all to make your terminal tasks super organized.`,
       pubDate: "1/22/17",
       mainPoints: [
         "To change WebStorm's terminal shell to the git-bash shell you should change the terminal's shell path setting to <kbd>C:\\Program Files\\Git\\bin\\sh.exe</kbd>",
@@ -50,7 +49,7 @@ export class PostService {
       "cardImage":"../assets/temp/images/3/cmp_image-pan.jpg",
       "title": "Cross media publishing project",
       "author": "Hayden",
-      "preview": "An undergraduate group project which involved organizing and structuring information before publishing to multiple media",
+      "preview": "An undergraduate group project that optimized an information system",
       "pubDate": "1/25/17",
       "mainPoints": [
         "This project's main goal was to improve the organization of a set of existing help documents that had been published by our school’s publishing center",
@@ -64,7 +63,7 @@ export class PostService {
       "cardImage":"../assets/temp/images/4/ipad2.jpg",
       "title": "School of Media Sciences App",
       "author": "Hayden",
-      "preview": "A digital publishing app I worked on in a co-op position at the Rochester Institute of Technology. The app features interactive articles and was made with an experimental Adobe publishing framework.",
+      "preview": "A digital publishing app made with a beta Adobe publishing framework.",
       "pubDate": "1/26/17",
       "mainPoints": [
         "I worked on this project over a ten week period with another student; we were advised by two of our professors from our program",
