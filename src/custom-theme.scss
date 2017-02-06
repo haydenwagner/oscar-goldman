@@ -27,19 +27,14 @@
   flex: 1 1 auto;
 }
 
-// Import theming functions
-@import '../node_modules/@angular/material/core/theming/theming';
-// Import your custom theme
-@import 'theme.scss';
+
 
 body, html{
   padding: 0;
   margin: 0;
 }
 
-.navbar{
-  background: md-color($primary, 700);
-}
+
 
 
 //.btn{

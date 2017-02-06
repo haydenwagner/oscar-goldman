@@ -1,3 +1,9 @@
+// Import theming functions
+@import '../../../node_modules/@angular/material/core/theming/theming';
+// Import your custom theme
+@import '../../theme.scss';
+
+
 #posts-page-elements{
   margin: 2em auto 0;
 
@@ -16,11 +22,33 @@
   .card{
     margin-bottom: 1em;
 
+    a{
+      color: #000;
+    }
+
+    .btn{
+      //font-weight:bold;
+      //color: #fff;
+      background-color: md-color($accent, 200);
+      border-color: md-color($accent, 200);
+    }
+
+    .card-block,
+    .card-footer{
+      border-left: 1rem solid md-color($primary, 500);
+    }
+
+    .card-footer{
+      border-top: none;
+    }
+
     .card-img-height-limiter{
       max-height: 5rem;
       overflow: hidden;
 
+
       img{
+        border-left: 1rem solid md-color($primary, 500);
         width: 100%;
       }
     }

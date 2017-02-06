@@ -1,9 +1,30 @@
-.active {
-  color: #fff;
+@import "../../assets/temp/bootstrap/scss/variables";
+@import "../../assets/temp/bootstrap/scss/mixins";
+
+// Import theming functions
+@import '../../../node_modules/@angular/material/core/theming/theming';
+// Import your custom theme
+@import '../../theme.scss';
+
+.navbar{
+  //background: md-color($primary, 700);
+  @include media-breakpoint-down (xs) {
+    .container{
+      margin:0;
+    }
+  }
+
+  a{
+    color: rgba(0, 0, 0, 0.9);
+  }
 }
+
+//.active {
+//  color: #fff;
+//}
 .navbar-toggler {
-  border: solid 1px silver;
-  border-radius: 2px;
-  color: #eee;
+  //border: solid 1px silver;
+  //border-radius: 2px;
+  //color: #eee;
 }
 

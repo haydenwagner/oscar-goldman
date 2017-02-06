@@ -1,11 +1,24 @@
 @import "../../assets/temp/bootstrap/scss/variables";
 @import "../../assets/temp/bootstrap/scss/mixins";
 
+// Import theming functions
+@import '../../../node_modules/@angular/material/core/theming/theming';
+// Import your custom theme
+@import '../../theme.scss';
+
+.bg-splash-elements{
+  background: md-color($primary, 500);
+  padding: 2rem 0;
+}
+
 #splash-elements {
-  .card {
-    margin: 2em 0 0 0;
-    border-width: 2px;
-  }
+  //.card {
+  //  margin: 2em 0 0 0;
+  //  //border-width: 2px;
+  //  //background-color: md-color($primary, 500);
+  //  //border-color: md-color($primary, 500);
+  //  //border-top-width: 2rem;
+  //}
 
   #social-btns {
     text-align: center;
@@ -21,6 +34,10 @@
     }
   }
 
+  .splash-description{
+    color: white;
+  }
+
   #image-self{
     text-align:center;
 
@@ -30,7 +47,14 @@
     }
 
     img {
+      border-radius: 100%;
+      border-top-left-radius: 0.25rem;
       max-width: 200px;
+
+      //&:hover{
+      //  border-top-left-radius: 100%;
+      //  border-top-right-radius: 0.25rem;
+      //}
     }
   }
 

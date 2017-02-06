@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 import {
   Event as RouterEvent,
@@ -14,12 +14,21 @@ import {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   loading: boolean = true;
 
   constructor(private router: Router){
     router.events.subscribe((event: RouterEvent) => {
       this.navigationInterceptor(event);
+    })
+  }
+
+  ngOnInit(){
+    this.router.events.subscribe(evt => {
+      if(!(evt instanceof NavigationEnd)){
+        return;
+      }
+      document.body.scrollTop = 0;
     })
   }
 
