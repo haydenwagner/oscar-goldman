@@ -22,36 +22,68 @@
   .card{
     margin-bottom: 1em;
 
+    .card-header{
+      .card-title{
+        margin:0;
+        color: #fff;
+      }
+
+      border-bottom: none;
+    }
+
+    //&::after{
+    //  content: "";
+    //  background-color: rgba(30,30,30,.5);
+    //  top: 0;
+    //  left: 0;
+    //  bottom: 0;
+    //  right: 0;
+    //  position: absolute;
+    //  //z-index: -1;
+    //}
+
     a{
       color: #000;
     }
 
     .btn{
       //font-weight:bold;
-      //color: #fff;
-      background-color: md-color($accent, 200);
-      border-color: md-color($accent, 200);
+      color: #fff;
+      background-color: md-color($primary, 500);
+      border-color: md-color($primary, 500);
+
+      &:hover{
+        background-color: md-color($primary, 700);
+        border-color: md-color($primary, 700);
+      }
     }
 
     .card-block,
     .card-footer{
-      border-left: 1rem solid md-color($primary, 500);
+      //border-left: 1rem solid md-color($primary, 500);
+    }
+
+    .card-block{
+      .card-text{
+        //color: #000;
+      }
+
     }
 
     .card-footer{
       border-top: none;
     }
 
-    .card-img-height-limiter{
-      max-height: 5rem;
-      overflow: hidden;
-
-
-      img{
-        border-left: 1rem solid md-color($primary, 500);
-        width: 100%;
-      }
-    }
+    //.card-img-height-limiter{
+    //  max-height: 5rem;
+    //  overflow: hidden;
+    //
+    //
+    //  img{
+    //    border-left: 1rem solid md-color($primary, 500);
+    //    width: 100%;
+    //  }
+    //}
 
     .card-footer{
       display: flex;

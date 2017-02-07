@@ -20,7 +20,7 @@ export class PostsPageComponent implements OnInit {
 
   getPosts(): void{
     //this.postService.getPosts().subscribe(posts => this.posts = posts);
-    this.posts = this.postService.getPosts();
+    this.posts = this.postService.getPosts().reverse();
   }
 
 }
