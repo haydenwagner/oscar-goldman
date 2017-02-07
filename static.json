@@ -1,6 +1,8 @@
 {
-  "root": "dist/",
+  "root": "dist",
+  "clean_urls": false,
   "routes": {
+    "/assets/*": "/assets/",
     "/**": "index.html"
   }
 }
