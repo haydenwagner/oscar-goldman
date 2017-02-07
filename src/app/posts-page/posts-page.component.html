@@ -1,48 +1,53 @@
 <div class="container" id="posts-page-elements">
-    <div class="col-lg-8 offset-lg-2">
-      <h1>Posts</h1>
+  <div class="col-lg-8 offset-lg-2">
+    <h1>Posts</h1>
 
 
-      <div  *ngFor="let post of posts" class="card">
-        <div class="card-header" [ngStyle]="{'background': 'linear-gradient(rgba(0, 0, 0, .8),rgba(0, 0, 0, 0.35)),url(' + post.cardImage + ')'}">
-          <h3 class="card-title">{{ post.title }}</h3>
-        </div>
-        <!--<div class="card-img-height-limiter">-->
-          <!--<img *ngIf="post.cardImage" class="card-img-top" src="{{post.cardImage}}" alt="Card image cap">-->
-        <!--</div>-->
-        <div class="card-block">
+    <div  *ngFor="let post of posts" class="card">
 
-          <!--<a [routerLink]="['/post', post.id]">-->
+      <!--<div class="card-img-height-limiter">-->
+      <!--<img *ngIf="post.cardImage" class="card-img-top" src="{{post.cardImage}}" alt="Card image cap">-->
+      <!--</div>-->
+      <div class="card-image" [ngStyle]="{'background': 'linear-gradient(90deg, white, rgba(255, 255, 255, 0.65) 55%, rgba(255, 255, 255, .35)),url(' + post.cardImage + ')'}">
 
-
-          <!--</a>-->
-          <p class="card-text">{{ post.preview }}</p>
-          <a [routerLink]="['/post', post.id]" class="btn btn-primary">Read Post</a>
-
-        </div>
-        <!--<div class="card-footer text-muted">-->
-          <!--<div>{{ post.author }} - {{ post.pubDate }}</div>-->
-          <!--<a [routerLink]="['/post', post.id]" class="btn btn-primary">Read Post</a>-->
-        <!--</div>-->
       </div>
+      <div class="card-block">
 
+        <!--<a [routerLink]="['/post', post.id]">-->
 
-      <!--<ul class="list-unstyled">-->
-        <!--<li *ngFor="let post of posts" class="media mb-3">-->
-          <!--<div class="img-size-limiter mr-3">-->
-            <!--<img *ngIf="post.cardImage" class="d-flex" src="{{post?.cardImage}}" alt="Post image">-->
-          <!--</div>-->
-          <!--<div class="media-body">-->
-            <!--<a [routerLink]="['/post', post.id]"><h5 class="mt-0 mb-1">{{ post?.title }}</h5></a>-->
-            <!--{{ post?.preview }}-->
+        <h3 class="card-title col-11">{{ post.title }}</h3>
+        <!--</a>-->
+        <p class="card-text col-10">{{ post.preview }}</p>
 
-            <!--<div class="text-muted mt-2">-->
-              <!--{{ post?.author }} - {{ post?.pubDate }} <a [routerLink]="['/post', post.id]" class="btn btn-primary float-right">Read Post</a>-->
-            <!--</div>-->
+        <div>
+          <a [routerLink]="['/post', post.id]" class="btn btn-primary">Read Post</a>
+          <!--<span class="text-muted">{{ post.author }} - {{ post.pubDate }}</span>-->
+        </div>
 
-          <!--</div>-->
-        <!--</li>-->
-      <!--</ul>-->
-
+      </div>
+      <!--<div class="card-footer text-muted">-->
+      <!--<div>{{ post.author }} - {{ post.pubDate }}</div>-->
+      <!--<a [routerLink]="['/post', post.id]" class="btn btn-primary">Read Post</a>-->
+      <!--</div>-->
     </div>
+
+
+    <!--<ul class="list-unstyled">-->
+    <!--<li *ngFor="let post of posts" class="media mb-3">-->
+    <!--<div class="img-size-limiter mr-3">-->
+    <!--<img *ngIf="post.cardImage" class="d-flex" src="{{post?.cardImage}}" alt="Post image">-->
+    <!--</div>-->
+    <!--<div class="media-body">-->
+    <!--<a [routerLink]="['/post', post.id]"><h5 class="mt-0 mb-1">{{ post?.title }}</h5></a>-->
+    <!--{{ post?.preview }}-->
+
+    <!--<div class="text-muted mt-2">-->
+    <!--{{ post?.author }} - {{ post?.pubDate }} <a [routerLink]="['/post', post.id]" class="btn btn-primary float-right">Read Post</a>-->
+    <!--</div>-->
+
+    <!--</div>-->
+    <!--</li>-->
+    <!--</ul>-->
+
+  </div>
 </div>
