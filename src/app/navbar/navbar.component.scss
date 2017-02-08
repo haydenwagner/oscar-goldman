@@ -14,8 +14,15 @@
     }
   }
 
+  .navbar-toggler {
+    //border: none;
+    &-right{
+      right:0;
+    }
+  }
+
   a{
-    color: rgba(0, 0, 0, 0.9);
+    //color: rgba(0, 0, 0, 0.9);
   }
 }
 
