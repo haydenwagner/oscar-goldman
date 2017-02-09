@@ -35,16 +35,29 @@
   },
   {
     "id":"4",
-    "cardImage":"../assets/temp/images/3/cmp_image-pan.jpg",
+    "cardImage":"../assets/temp/images/4/ipad2.jpg",
     "title": "School of Media Sciences App",
     "author": "Hayden",
-    "preview": "A digital publishing app I worked on in a co-op position at the Rochester Institute of Technology. The app features interactive articles and was made with an experimental Adobe publishing framework.",
+    "preview": "A digital publishing app made with a beta Adobe publishing framework.",
     "pubDate": "1/26/17",
     "mainPoints": [
       "I worked on this project over a ten week period with another student; we were advised by two of our professors from our program",
       "Our main goal was to create an interactive application, using new Adobe software, that showcased the School of Media Sciences at RIT to potential students, current students, and alumni"
     ],
     "mdFileID":"a4"
+  },
+  {
+    "id":"5",
+    "cardImage":"../assets/temp/images/4/ipad2.jpg",
+    "title": "slide-swell",
+    "author": "Hayden",
+    "preview": "A good looking, small, pure JavaScript slider",
+    "pubDate": "2/8/17",
+    "mainPoints": [
+      "The goal of this project is to create an aesthetic slider for desktop and mobile projects that are trying to avoid including jQuery as a dependency.",
+      "The slider supports click and touch events, and its appearance is modeled after the Spotify album slider."
+    ],
+    "mdFileID":"a5"
   }
 ]
 

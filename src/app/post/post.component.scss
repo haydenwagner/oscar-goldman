@@ -1,5 +1,5 @@
-@import "../../assets/temp/bootstrap/scss/variables";
-@import "../../assets/temp/bootstrap/scss/mixins";
+@import "../../assets/lib/bootstrap/scss/variables";
+@import "../../assets/lib/bootstrap/scss/mixins";
 
 //@include media-breakpoint-up(sm) {
 //  html {
@@ -47,6 +47,10 @@
       @include img-fluid;
     }
 
+    .no-touch{
+      cursor: not-allowed;
+    }
+
     figure{
       video{
         max-width:100%;
@@ -58,6 +62,14 @@
       img{
         max-width: 135px;
       }
+    }
+
+    code{
+      display: block;
+      overflow-x: auto;
+      padding: 0.5em;
+      color: #abb2bf;
+      background: #282c34;
     }
   }
 

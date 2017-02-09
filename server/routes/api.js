@@ -9,7 +9,7 @@ const router = express.Router();
 const path = require('path');
 
 const fs = require('fs');
-const md = require('node-markdown').Markdown;
+const marked = require('marked');
 
 
 const axios = require('axios');
@@ -23,11 +23,18 @@ const axios = require('axios');
 let posts = require('../posts/posts.json');
 // console.log(posts);
 
+marked.setOptions({
+  highlight: function (code) {
+    return require('highlight.js').highlightAuto(code).value;
+  }
+});
+
 posts.forEach(function(p){
   if(p.mdFileID){
     fs.readFile(path.resolve(__dirname,'../_markdown/' + p.mdFileID + '.md'), (err, data) => {
       if(err) throw err;
-      p.markdown = md(data.toString());
+      //p.markdown = md(data.toString());
+      p.markdown = marked(data.toString());
     })
   }
 });
