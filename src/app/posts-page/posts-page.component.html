@@ -1,6 +1,13 @@
+<div class="bg bg-top-main-color hidden" [hidden]="!isPostsRoute">
+  <div class="container">
+    <div class="col-lg-8 offset-lg-2">
+      <h1>Posts</h1>
+    </div>
+  </div>
+</div>
+
 <div class="container" id="posts-page-elements">
   <div class="col-lg-8 offset-lg-2">
-    <h1>Posts</h1>
 
 
     <div  *ngFor="let post of posts" class="card">

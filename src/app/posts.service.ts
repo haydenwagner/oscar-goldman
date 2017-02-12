@@ -33,7 +33,7 @@ export class PostService {
     },
     {
       "id":"3",
-      "cardImage":"../assets/temp/images/3/cmp_image-pan.jpg",
+      "cardImage":"../assets/temp/images/3/card_image.jpg",
       "title": "Cross media publishing project",
       "author": "Hayden",
       "preview": "An undergraduate group project that optimized an information system",
@@ -47,7 +47,7 @@ export class PostService {
     },
     {
       "id":"4",
-      "cardImage":"../assets/temp/images/4/ipad2.jpg",
+      "cardImage":"../assets/temp/images/4/card_image.jpg",
       "title": "School of Media Sciences app",
       "author": "Hayden",
       "preview": "A digital publishing app made with a beta Adobe publishing framework.",
