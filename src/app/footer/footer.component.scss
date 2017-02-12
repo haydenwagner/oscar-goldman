@@ -1,0 +1,14 @@
+// Import theming functions
+@import '../../../node_modules/@angular/material/core/theming/theming';
+// Import your custom theme
+@import '../../theme.scss';
+
+.footer{
+  margin-top: 5rem;
+  padding: 2rem 0;
+  background: md-color($primary, 100);
+
+  .container{
+
+  }
+}
