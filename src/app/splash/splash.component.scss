@@ -6,9 +6,17 @@
 // Import your custom theme
 @import '../../theme.scss';
 
-.bg-splash-elements{
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),md-color($primary, 500);
+//.bg-splash-elements{
+//  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),md-color($primary, 500);
+//  padding: 2rem 0;
+//}
+
+.bg{
   padding: 2rem 0;
+
+  &-top-main-color{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),md-color($primary, 500);
+  }
 }
 
 #splash-elements {

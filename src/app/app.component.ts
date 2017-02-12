@@ -28,7 +28,9 @@ export class AppComponent implements OnInit {
       if(!(evt instanceof NavigationEnd)){
         return;
       }
-      document.body.scrollTop = 0;
+      window.scrollTo(0,0);
+      //document.body.scrollTop = 0;
+      console.log("scrolltop");
     })
   }
 

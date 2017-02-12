@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { PostComponent } from './post/post.component';
 import { NavbarModule } from './navbar/navbar.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NavbarModule } from './navbar/navbar.module';
     HomeComponent,
     PostsPageComponent,
     SplashComponent,
-    PostComponent
+    PostComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

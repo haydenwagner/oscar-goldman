@@ -1,12 +1,5 @@
 [
   {
-    "id":"1",
-    "title": "JS Functions with server data",
-    "author": "Hayden",
-    "preview": "Super preview text, when you read this you will want to read the entire article. This is the article for you!",
-    "pubDate": "1/10/17",
-    "mdFileID":"a1"},
-  {
     "id":"2",
     "cardImage":"../assets/temp/images/3_terminal-complete.jpg",
     "title": "Using Git Bash in the native WebStorm terminal (Windows)",
@@ -36,7 +29,7 @@
   {
     "id":"4",
     "cardImage":"../assets/temp/images/4/ipad2.jpg",
-    "title": "School of Media Sciences App",
+    "title": "School of Media Sciences app",
     "author": "Hayden",
     "preview": "A digital publishing app made with a beta Adobe publishing framework.",
     "pubDate": "1/26/17",

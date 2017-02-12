@@ -1,9 +1,18 @@
-<div class="container" id="post-element">
-  <div class="col-lg-8 offset-lg-2">
-
+<div class="bg bg-top-main-color">
+  <div class="container">
+    <div class="col-lg-8 offset-lg-2">
       <h1>{{ post?.title }}</h1>
       <p>{{post?.author}} - {{ post?.pubDate }}</p>
       <p class="lead">{{ post?.preview }}</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="post-element">
+  <div class="col-lg-8 offset-lg-2">
+
+
 
 
     <!--<div class="main-points" *ngIf="post?.mainPoints">-->
@@ -14,7 +23,7 @@
       <!--</div>-->
 
     <div class="main-points card" *ngIf="post?.mainPoints">
-      <h2 class="card-header card-inverse bg-info">Main Points</h2>
+      <h2 class="card-header card-inverse">Main Points</h2>
       <div class="card-block">
         <ul>
         <li *ngFor="let point of post?.mainPoints" [innerHTML]="point"></li>
