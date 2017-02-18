@@ -9,6 +9,14 @@
   background: md-color($primary, 100);
 
   .container{
+    p{
+      &.small{
+        font-size: 90%;
+      }
+    }
 
+      p:last-of-type{
+        margin-bottom: 0;
+      }
   }
 }
