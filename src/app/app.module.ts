@@ -16,6 +16,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PostComponent } from './post/post.component';
 import { NavbarModule } from './navbar/navbar.module';
 import { FooterComponent } from './footer/footer.component';
+import { ReadingSliderComponent } from './reading-slider/reading-slider.component';
+
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { FooterComponent } from './footer/footer.component';
     PostsPageComponent,
     SplashComponent,
     PostComponent,
-    FooterComponent
+    FooterComponent,
+    ReadingSliderComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
