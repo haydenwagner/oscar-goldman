@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
 
 import { Post } from '../post';
 import { PostService } from '../posts.service';
@@ -19,7 +20,8 @@ export class PostComponent implements OnInit {
 
   constructor(
     private postService: PostService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -34,6 +36,7 @@ export class PostComponent implements OnInit {
     //   this.post = p;
     // });
     this.post = this.postService.getPost( post_id );
+    this.post.markdown = this.sanitizer.bypassSecurityTrustHtml(this.post.markdown);
   }
 
 }

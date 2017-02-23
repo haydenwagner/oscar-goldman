@@ -32,25 +32,36 @@
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),md-color($primary, 500);
     color: #fff;
   }
+
+  .title{
+    margin-bottom: 1.5rem;
+  }
 }
 
 #post-element {
   margin: 2em auto 10em;
 
-  h1, h2, h3, .h1, .h2, .h3{
-    margin-top: 3rem;
-    margin-bottom: 1rem;
+  h1, h2,.h1, .h2{
+    margin: 3rem 0 2rem;
   }
 
-  h4, h5, h6, .h4, .h5, .h6{
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    color: #404040;
+  h3, .h3{
+    margin: 2rem 0;
+    color: #505050;
+    font-weight: 400;
   }
 
+  p{
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  ul,ol{
+    margin-bottom: 2rem;
+  }
 
   li{
-    margin: 1em 0;
+    margin: .5em 0;
   }
 
   @include media-breakpoint-up(md) {
@@ -58,7 +69,7 @@
   }
 
   .main-points{
-    margin: 2em 0;
+    margin: 2.5em 0;
 
     .card-header{
       color: white;
@@ -70,13 +81,22 @@
       padding: 0 1.25rem 0 0;
     }
 
-    li{
-      margin: 1em 0;
+    ul{
+      margin-bottom: 0;
+
+      li{
+        margin: .5em 0;
+      }
     }
+
 
   }
 
   #content {
+    .alert{
+      margin-bottom: 2rem;
+    }
+
     img {
       @include img-fluid;
     }
@@ -90,6 +110,8 @@
         max-width:100%;
       }
 
+      text-align: center;
+      margin: 2.5rem 0;
       display: block;
     }
 
@@ -106,7 +128,14 @@
       padding: 0.5em;
       color: #abb2bf;
       background: #282c34;
+      margin-bottom: 2rem;
     }
+
+    iframe{
+      border:none;
+      border: none;
+    }
+
   }
 
   mark, .mark{
