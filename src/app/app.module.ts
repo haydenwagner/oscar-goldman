@@ -19,6 +19,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ReadingSliderComponent } from './reading-slider/reading-slider.component';
 
 import { NotFoundComponent } from './not-found/not-found.component';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     PostComponent,
     FooterComponent,
     ReadingSliderComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
