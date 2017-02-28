@@ -26,16 +26,16 @@ export class PostComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       console.log(params);
-      this.getPost( params['id'] );
+      this.getPost( params['url'] );
     })
   }
 
-  getPost( post_id: number ): void{
+  getPost( post_url: string ): void{
     // this.postService.getPost( post_id ).subscribe(p => {
     //   console.log(p);
     //   this.post = p;
     // });
-    this.post = this.postService.getPost( post_id );
+    this.post = this.postService.getPost( post_url );
     this.post.markdown = this.sanitizer.bypassSecurityTrustHtml(this.post.markdown);
   }
 
