@@ -65,6 +65,19 @@
       "The slider supports click and touch events, and its appearance is modeled after the Spotify album slider."
     ],
     "mdFileID":"a5"
+  },
+  {
+    "id":"7",
+    "cardImage":"../assets/temp/images/4/ipad2.jpg",
+    "title": "D3 data-binding and selections",
+    "author": "Hayden",
+    "preview": "An interactive visual showing a few key concepts of the JS visualization library D3.js",
+    "pubDate": "3/5/17",
+    "mainPoints": [
+      "D3 joins data to visual elements so the data drives the visual",
+      "D3 'selections' allow for unique visual changes for the different states of changing data"
+    ],
+    "mdFileID":"a7"
   }
 ]
 
