@@ -40,7 +40,8 @@ posts.forEach(function(p){
 });
 
 router.get('/', (req, res) => {
-  res.send('api works');
+  console.log(res);
+    res.send('api works');
 });
 
 //get all posts

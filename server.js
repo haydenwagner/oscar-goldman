@@ -3,6 +3,7 @@ const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
 
+const cors = require('./server/cors');
 const api = require('./server/routes/api');
 
 const app = express();
@@ -10,15 +11,15 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// let allowCrossDomain = function(req, res, next) {
-//   res.header('Access-Control-Allow-Origin', '*');
-//   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-//   res.header('Access-Control-Allow-Headers', 'Content-Type');
-//
-//   next();
-// };
-//
-// app.use(allowCrossDomain);
+let allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+
+    next();
+};
+
+app.use( cors() );
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
