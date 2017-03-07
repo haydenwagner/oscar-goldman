@@ -1,48 +1,51 @@
 [
   {
     "id":"6",
-    "cardImage":"../assets/temp/images/4/ipad2.jpg",
+    "cardImage":"",
     "title": "Meta site post",
     "author": "Hayden",
-    "preview": "META!",
+    "preview": "More info about the site and its purpose",
     "pubDate": "2/8/17",
     "mainPoints": [
       "This website's framework is a bit ridiculous",
       "The content is currently not ground-breaking",
       "They serve a purpose for me to learn and improve as a developer"
     ],
+    "url":"meta-site-post",
     "mdFileID":"a6"
   },
   {
     "id":"2",
     "cardImage":"../assets/temp/images/3_terminal-complete.jpg",
-    "title": "Using Git Bash in the native WebStorm terminal (Windows)",
+    "title": "Make your WebStorm terminal great",
     "author": "Hayden",
-    "preview": "I use WebStorm as my IDE, and I use git-bash on Windows. WebStorm features an integrated terminal, but if you want to use the git-bash shell instead of the default windows shell you need to change the 'shell path' in the WebStorm terminal settings.",
+    "preview": "Are you using Webstorm + git-bash + Windows? Integrate it all to make your terminal tasks super organized.",
     "pubDate": "1/22/17",
     "mainPoints": [
       "To change WebStorm's terminal shell to the git-bash shell you should change the terminal's shell path setting to <kbd>C:\\Program Files\\Git\\bin\\sh.exe</kbd>",
       "This is helpful for developers who want to take advantage of WebStorm's integrated terminal and still use bash commands in their shell."
     ],
+    "url":"make-your-webstorm-terminal-great",
     "mdFileID":"a2"
   },
   {
     "id":"3",
-    "cardImage":"../assets/temp/images/3/cmp_image-pan.jpg",
+    "cardImage":"../assets/temp/images/3/card_image.jpg",
     "title": "Cross media publishing project",
     "author": "Hayden",
-    "preview": "An undergraduate group project which involved organizing and structuring information before publishing to multiple media",
+    "preview": "An undergraduate group project to improve an information system",
     "pubDate": "1/25/17",
     "mainPoints": [
       "This project's main goal was to improve the organization of a set of existing help documents that had been published by our school’s publishing center",
       "The final deliverables were the republished documents in print and web format",
       "We used information schemas, xml markup and templating, and HTML and AJAX to create the project deliverables"
     ],
+    "url":"cross-media-publishing-project",
     "mdFileID":"a3"
   },
   {
     "id":"4",
-    "cardImage":"../assets/temp/images/4/ipad2.jpg",
+    "cardImage":"../assets/temp/images/4/card_image.jpg",
     "title": "School of Media Sciences app",
     "author": "Hayden",
     "preview": "A digital publishing app made with a beta Adobe publishing framework.",
@@ -51,12 +54,13 @@
       "I worked on this project over a ten week period with another student; we were advised by two of our professors from our program",
       "Our main goal was to create an interactive application, using new Adobe software, that showcased the School of Media Sciences at RIT to potential students, current students, and alumni"
     ],
+    "url":"school-of-media-sciences-app",
     "mdFileID":"a4"
   },
   {
     "id":"5",
-    "cardImage":"../assets/temp/images/4/ipad2.jpg",
-    "title": "slide-swell",
+    "cardImage":"../assets/temp/images/5/new-slider_card.jpg",
+    "title": "slideswell",
     "author": "Hayden",
     "preview": "A good looking, small, pure JavaScript slider",
     "pubDate": "2/8/17",
@@ -64,6 +68,7 @@
       "The goal of this project is to create an aesthetic slider for desktop and mobile projects that are trying to avoid including jQuery as a dependency.",
       "The slider supports click and touch events, and its appearance is modeled after the Spotify album slider."
     ],
+    "url":"slideswell",
     "mdFileID":"a5"
   },
   {
@@ -77,6 +82,7 @@
       "D3 joins data to visual elements so the data drives the visual",
       "D3 'selections' allow for unique visual changes for the different states of changing data"
     ],
+    "url":"d3-data-bind-selections",
     "mdFileID":"a7"
   }
 ]

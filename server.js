@@ -10,19 +10,8 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
-let allowCrossDomain = function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-
-    next();
-};
-
 app.use( cors() );
-
 app.use(express.static(path.join(__dirname, 'dist')));
-
 app.use('/api', api);
 
 app.get('*', (req, res) => {

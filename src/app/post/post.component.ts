@@ -31,12 +31,13 @@ export class PostComponent implements OnInit {
   }
 
   getPost( post_url: string ): void{
-    // this.postService.getPost( post_id ).subscribe(p => {
-    //   console.log(p);
-    //   this.post = p;
-    // });
-    this.post = this.postService.getPost( post_url );
-    this.post.markdown = this.sanitizer.bypassSecurityTrustHtml(this.post.markdown);
+    this.postService.getPost( post_url ).subscribe(p => {
+      console.log(p);
+      this.post = p;
+      this.post.markdown = this.sanitizer.bypassSecurityTrustHtml(this.post.markdown);
+    });
+    //this.post = this.postService.getPost( post_url );
+
   }
 
 }

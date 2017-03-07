@@ -51,9 +51,10 @@ router.get('/posts', (req, res) => {
   // console.log(posts);
 })
 
-router.get('/post/:post_id', (req, res) => {
+router.get('/post/:post_url', (req, res) => {
   console.log(req.params.post_id);
-  let post = getPost(req.params.post_id);
+
+  let post = getPost(req.params.post_url);
 
   if(post){
     res.status(200).json(post);
@@ -67,16 +68,16 @@ router.get('/post/:post_id', (req, res) => {
 module.exports = router;
 
 
-function getPost(post_id){
+function getPost(post_url){
   if(posts){
     return posts.filter(post => {
-      console.log(typeof post_id);
-      console.log(typeof post.id);
-      console.log(post.id === post_id);
-      return post.id === post_id;
+      console.log(typeof post_url);
+      console.log(typeof post.url);
+      console.log(post.url === post_url);
+      return post.url === post_url;
     })[0];
   }
   else{
-    throw Error('No posts available');
+    throw Error('Requested post does not exist or is available');
   }
 }
