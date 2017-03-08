@@ -35,8 +35,8 @@ export class PostsPageComponent implements OnInit {
   }
 
   getPosts(): void{
-    //this.postService.getPosts().subscribe(posts => this.posts = posts);
-    this.posts = this.postService.getPosts().reverse();
+    this.postService.getPosts().subscribe(posts => this.posts = posts.reverse());
+    //this.posts = this.postService.getPosts().reverse();
   }
 
 }
