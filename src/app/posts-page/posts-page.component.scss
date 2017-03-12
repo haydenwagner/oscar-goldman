@@ -3,30 +3,11 @@
 // Import your custom theme
 @import '../../theme.scss';
 
-.bg{
-  padding: 2rem 0 1rem;
 
-  &-top-main-color{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),md-color($primary, 500);
-    color: #fff;
-  }
-}
 
 
 #posts-page-elements{
   margin: 2em auto 2rem;
-
-  //.main-points{
-  //  li{
-  //    margin: 1em 0;
-  //  }
-  //}
-  //li{
-  //  img {
-  //    height: 80px;
-  //  }
-  //}
-
 
   .card{
     margin-bottom: 1em;
