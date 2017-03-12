@@ -1,3 +1,26 @@
-<p>
-  about works!
-</p>
+<div class="bg bg-top-main-color">
+    <div class="container">
+        <div class="col-lg-8 offset-lg-2">
+            <h1>About</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="about-elements">
+    <div class="col-lg-8 offset-lg-2">
+        <div>
+            <p>Sum education</p>
+            <p>Current interests overview</p>
+            <p>Sum experience to-date (development with a focus on JavaScript)</p>
+        </div>
+
+        <div>
+            <h4>Positions</h4>
+            <div class="card" *ngFor="let p of positions">
+                <p>{{p.name}}</p>
+                <p>{{p.description}}</p>
+                <a *ngFor="let link of p.postLinks" [routerLink]="['/post', link]">{{link}}</a>
+            </div>
+        </div>
+    </div>
+</div>
