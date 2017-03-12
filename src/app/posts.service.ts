@@ -16,25 +16,25 @@ export class PostService {
 
   private postsUrl = 'http://localhost:3000/api/posts';
   private postUrl = 'http://localhost:3000/api/post/';
-  development = true;
+  prod = false;
 
 
   posts = [
-      {
-      "id":"6",
-      "cardImage":"",
-      "title": "Meta site post",
-      "author": "Hayden",
-      "preview": "More info about the site and its purpose",
-      "pubDate": "2/8/17",
-      "mainPoints": [
-        "Building this website with Angular is overkill",
-        "The content is currently not ground-breaking",
-        "They serve a purpose for me to learn and improve as a writer and developer"
-      ],
-        "url":"meta-site-post",
-      "markdown":"<!--\nTitle: Meta site post\nPreview: META!\nMain Points:\n- Building this website with Angular is overkill\n- The content is currently not ground-breaking\n- They serve a purpose for me to learn and improve as a writer and developer\n-->\n<p>The purposes of this website are to give me practice with Angular 2, and to get me writing and thinking more about the web/software development world.</p>\n<p><strong>The Angular web framework is overkill for this application</strong>. A simple webpage would load the content I have here with zero wait time, and it wouldn’t have any impact on the current usability of the site. I decided to build the site with Angular because it was a challenge, and I wanted to learn more about web framework models, typescript, node, routing etc.</p>\n<p>Lately I have been looking at the <a href=\"http://emberjs.com\" target=\"_blank\">Ember.js framework</a> quite a bit, and I believe that it would be a better fit for this project. In the future I may keep this Angular site as a Github repo, and simplify the production site by switching to the Ember.js framework.</p>\n<p><strong>The world doesn’t really need another developer making useless posts</strong>. Currently the posts here give me content to manage and present on this site, and gets me writing and thinking about the development industry. In the future, hopefully, I can offer something unique that won’t add to the clutter on the internet.</p>\n<p>The site is currently under construction, you can find upcoming improvements and features in the <a href=\"https://github.com/haydenwagner/oscar-goldman/issues\" target=\"_blank\">project repo&#39;s issues</a>.</p>\n"
-    },
+    //   {
+    //   "id":"6",
+    //   "cardImage":"",
+    //   "title": "Meta site post",
+    //   "author": "Hayden",
+    //   "preview": "More info about the site and its purpose",
+    //   "pubDate": "2/8/17",
+    //   "mainPoints": [
+    //     "Building this website with Angular is overkill",
+    //     "The content is currently not ground-breaking",
+    //     "They serve a purpose for me to learn and improve as a writer and developer"
+    //   ],
+    //     "url":"meta-site-post",
+    //   "markdown":"<!--\nTitle: Meta site post\nPreview: META!\nMain Points:\n- Building this website with Angular is overkill\n- The content is currently not ground-breaking\n- They serve a purpose for me to learn and improve as a writer and developer\n-->\n<p>The purposes of this website are to give me practice with Angular 2, and to get me writing and thinking more about the web/software development world.</p>\n<p><strong>The Angular web framework is overkill for this application</strong>. A simple webpage would load the content I have here with zero wait time, and it wouldn’t have any impact on the current usability of the site. I decided to build the site with Angular because it was a challenge, and I wanted to learn more about web framework models, typescript, node, routing etc.</p>\n<p>Lately I have been looking at the <a href=\"http://emberjs.com\" target=\"_blank\">Ember.js framework</a> quite a bit, and I believe that it would be a better fit for this project. In the future I may keep this Angular site as a Github repo, and simplify the production site by switching to the Ember.js framework.</p>\n<p><strong>The world doesn’t really need another developer making useless posts</strong>. Currently the posts here give me content to manage and present on this site, and gets me writing and thinking about the development industry. In the future, hopefully, I can offer something unique that won’t add to the clutter on the internet.</p>\n<p>The site is currently under construction, you can find upcoming improvements and features in the <a href=\"https://github.com/haydenwagner/oscar-goldman/issues\" target=\"_blank\">project repo&#39;s issues</a>.</p>\n"
+    // },
     {
       "id":"2",
       "cardImage":"../assets/temp/images/2/3_terminal-complete.jpg",
@@ -110,7 +110,7 @@ export class PostService {
 
     //Fetch all existing post
     getPosts(): Observable<Post[]> {
-        if(this.development){
+        if(this.prod){
             return new Observable(observer => {
                 if (this.posts.length > 0){
                     console.log(this.posts);
@@ -136,7 +136,7 @@ export class PostService {
 
     // Fetch all existing post
     getPost( post_url ): Observable<Post> {
-      if(this.development){
+      if(this.prod){
           return new Observable<Post>(observer => {
               let filteredPost = this.posts.filter(post => {
                   return post.url === post_url;

@@ -1,22 +1,7 @@
 [
   {
-    "id":"6",
-    "cardImage":"",
-    "title": "Meta site post",
-    "author": "Hayden",
-    "preview": "More info about the site and its purpose",
-    "pubDate": "2/8/17",
-    "mainPoints": [
-      "This website's framework is a bit ridiculous",
-      "The content is currently not ground-breaking",
-      "They serve a purpose for me to learn and improve as a developer"
-    ],
-    "url":"meta-site-post",
-    "mdFileID":"a6"
-  },
-  {
     "id":"2",
-    "cardImage":"../assets/temp/images/3_terminal-complete.jpg",
+    "cardImage":"../assets/temp/images/2/3_terminal-complete.jpg",
     "title": "Make your WebStorm terminal great",
     "author": "Hayden",
     "preview": "Are you using Webstorm + git-bash + Windows? Integrate it all to make your terminal tasks super organized.",
