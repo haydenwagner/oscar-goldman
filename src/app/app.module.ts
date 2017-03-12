@@ -20,6 +20,7 @@ import { ReadingSliderComponent } from './reading-slider/reading-slider.componen
 
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SafePipe } from './safe.pipe';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SafePipe } from './safe.pipe';
     FooterComponent,
     ReadingSliderComponent,
     NotFoundComponent,
-    SafePipe
+    SafePipe,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
