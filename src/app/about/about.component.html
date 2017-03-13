@@ -9,17 +9,31 @@
 <div class="container" id="about-elements">
     <div class="col-lg-8 offset-lg-2">
         <div>
-            <p>Sum education</p>
+            <h2>Education</h2>
+            <p>Currently, I am in an MBA program at the Rochester Institute of Technology in Rochester, New York, with an expected graduation date of May 2017. I am concentrating in management information systems.</p>
+            <p>I also got my undergraduate degree at the Rochester Institute of Technology, a Bachelor of Science in Media Arts and Technology.</p>
+
+            <h2>Interests</h2>
             <p>Current interests overview</p>
+
+            <h2>Experience</h2>
             <p>Sum experience to-date (development with a focus on JavaScript)</p>
         </div>
 
         <div>
-            <h4>Positions</h4>
+            <h2>Positions</h2>
             <div class="card" *ngFor="let p of positions">
-                <p>{{p.name}}</p>
-                <p>{{p.description}}</p>
-                <a *ngFor="let link of p.postLinks" [routerLink]="['/post', link]">{{link}}</a>
+                <!--<div *ngIf="p.current" class="card-header text-center bg-info text-white">-->
+                    <!--Current position-->
+                <!--</div>-->
+                <div class="card-block">
+                    <h3 class="card-title">{{p.name}} <span *ngIf="p.current" class="badge badge-info">Current</span></h3>
+                    <p class="card-text">{{p.description}}</p>
+                </div>
+                <div *ngIf="p.postLinks.length > 0" class="card-block">
+                    <h5>Related posts</h5>
+                    <a *ngFor="let link of p.postLinks" class="card-link" [routerLink]="['/post', link]">{{link}}</a>
+                </div>
             </div>
         </div>
     </div>

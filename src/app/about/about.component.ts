@@ -12,13 +12,16 @@ export class AboutComponent implements OnInit {
   positions = [
       {
           name: 'Test position',
+          current: true,
           description: 'This is the test position I was in for 2 seconds.',
           postLinks: [
-              'd3-data-bind-selections'
+              'd3-data-bind-selections',
+              'slideswell'
           ]
       },
       {
           name: 'Test position',
+          current: false,
           description: 'This is the test position I was in for 2 seconds.',
           postLinks: [
               'slideswell'
