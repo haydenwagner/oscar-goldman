@@ -10,7 +10,7 @@ The site is currently under construction, you can find upcoming improvements and
 
 ## Name explanation
 
-The repo name doesn't mean much, it was just a code name I gave this project. It is inspired by a chicken in an episode of Trailer Park Boys whose name was probably inspired by ["a fictional character created by Martin Caidin and introduces in his 1972 novel Cyborg and later portrayed by Richard Anderson in TV and Film." (Wikipedia link)](https://en.wikipedia.org/wiki/Oscar_Goldman)
+The repo name doesn't mean much, it was just a code name I gave this project. It is inspired by a chicken in an episode of Trailer Park Boys whose name was probably inspired by ["a fictional character created by Martin Caidin and introduced in his 1972 novel Cyborg and later portrayed by Richard Anderson in TV and Film." (Wikipedia link)](https://en.wikipedia.org/wiki/Oscar_Goldman)
 
 ![Oscar Goldman Trailer Park Boys][chicken]
 
