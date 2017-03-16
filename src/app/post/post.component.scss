@@ -54,6 +54,7 @@
   p{
     line-height: 1.8;
     margin-bottom: 2rem;
+    font-size: 18px;
   }
 
   ul,ol{
@@ -64,9 +65,9 @@
     margin: .5em 0;
   }
 
-  @include media-breakpoint-up(md) {
-      font-size: 18px;
-  }
+  //@include media-breakpoint-up(md) {
+  //    font-size: 18px;
+  //}
 
   .main-points{
     margin: 2.5em 0;

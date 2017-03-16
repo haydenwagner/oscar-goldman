@@ -552,3 +552,22 @@ body {
   .bg-top-main-color {
     background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), #009688;
     color: #fff; }
+
+.post-style h1, .post-style h2, .post-style .h1, .post-style .h2 {
+  margin: 3rem 0 2rem; }
+
+.post-style h3, .post-style .h3 {
+  margin: 2rem 0;
+  color: #505050;
+  font-weight: 400; }
+
+.post-style p {
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-size: 18px; }
+
+.post-style ul, .post-style ol {
+  margin-bottom: 2rem; }
+
+.post-style li {
+  margin: .5em 0; }
