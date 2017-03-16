@@ -4,13 +4,11 @@ This is a personal site that serves as a practice area for me to try different w
 
 The Angular web framework is overkill for this application; I decided to build the site with Angular because it was a challenge, and I wanted to learn more about web framework models, typescript, node, routing etc.
 
-Lately I have been looking at the [Ember.js](http://emberjs.com) framework quite a bit, and I believe that it would be a better fit for this project. In the future I may keep this Angular site as a Github repo, and simplify the production site by switching to the Ember.js framework.
-
 The site is currently under construction, you can find upcoming improvements and features in this repo's issues tab.
 
 ## Name explanation
 
-The repo name doesn't mean much, it was just a code name I gave this project. It is inspired by a chicken in an episode of Trailer Park Boys whose name was probably inspired by ["a fictional character created by Martin Caidin and introduces in his 1972 novel Cyborg and later portrayed by Richard Anderson in TV and Film." (Wikipedia link)](https://en.wikipedia.org/wiki/Oscar_Goldman)
+The repo name doesn't mean much, it was just a code name I gave this project. It is inspired by a chicken in an episode of Trailer Park Boys whose name was probably inspired by ["a fictional character created by Martin Caidin and introduced in his 1972 novel Cyborg and later portrayed by Richard Anderson in TV and Film." (Wikipedia link)](https://en.wikipedia.org/wiki/Oscar_Goldman)
 
 ![Oscar Goldman Trailer Park Boys][chicken]
 
