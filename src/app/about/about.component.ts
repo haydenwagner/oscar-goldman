@@ -16,7 +16,7 @@ export class AboutComponent implements OnInit {
           location: 'Rochester, NY',
           timeFrame: 'August 2016 – Present',
           current: true,
-          description: ['Front-end and back-end development with JavaScript, D3.js, Node.js, and Express.js. I am working on two main projects in this position: an application that integrates with Asana’s API and improves the workflow of a captioning process, and an interactive application that models a color science process for online students.'],
+          description: ['Front-end and back-end development with JavaScript, D3.js, Node.js, and Express.js. I am working on two main projects in this position: an application that integrates with Asana’s API (task management software) and improves the workflow of a captioning process, and an interactive application that models a color science process for online students.'],
           postLinks: []
       },
       {

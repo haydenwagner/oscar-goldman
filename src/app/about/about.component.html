@@ -1,43 +1,49 @@
 <div class="bg bg-top-main-color">
     <div class="container">
-        <div class="col-lg-8 offset-lg-2">
+        <div class="">
             <h1>About</h1>
+            <p class="lead lead-top">Here you can learn more about my education, interests, experience, and positions I have held.</p>
             <!--add a lead here, just say that this site is a mix of a portfolio site and an development project/experiement to help me learn and show off what I have made so far as a developer-->
         </div>
     </div>
 </div>
 
 <div class="container" id="about-elements">
-    <div class="col-lg-8 offset-lg-2 post-style">
-        <div>
-            <h2>Education</h2>
-            <p>Currently, I am in an MBA program at the Rochester Institute of Technology in Rochester, New York, with an expected graduation date of May 2017. I am concentrating in management information systems.</p>
-            <p>I also got my undergraduate degree at the Rochester Institute of Technology, a Bachelor of Science in Media Arts and Technology.</p>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="post-style post-style-text">
+                <h2>Education</h2>
+                <p>Currently, I am in an MBA program at the Rochester Institute of Technology in Rochester, New York, with an expected graduation date of May 2017. I am concentrating in management information systems.</p>
+                <p>I also got my undergraduate degree at the Rochester Institute of Technology, a Bachelor of Science in Media Arts and Technology.</p>
 
-            <h2>Career Interests</h2>
-            <p>I am interested in systems analysis and process improvement, and I am currently looking for positions in the web and software development industry. I want to help businesses implement projects and new solutions efficiently and correctly.</p>
-            <p>As a developer, I am interested in working more with web frameworks and Node.js, and I am always interested in developing clean, lightweight solutions that don’t include unnecessary dependencies.</p>
+                <h2>Career Interests</h2>
+                <p>I am interested in systems analysis and process improvement, and I am currently looking for positions in the web and software development industry. I want to help businesses implement projects and new solutions efficiently and correctly.</p>
+                <p>As a developer, I am interested in working more with web frameworks and Node.js, and I am always interested in developing clean, lightweight solutions that don’t include unnecessary dependencies.</p>
 
-            <h2>Experience</h2>
-            <p>My experience so far is in web development: I started as a front-end developer working with mostly HTML/CSS/jQuery, but I have moved on to doing both front-end and back-end development, with a focus on JavaScript development.</p>
+                <h2>Experience</h2>
+                <p>My experience so far is in web development: I started as a front-end developer working with mostly HTML/CSS/jQuery, but I have moved on to doing both front-end and back-end development, with a focus on JavaScript development.</p>
+            </div>
         </div>
+        <div class="col-lg-6">
 
-        <div>
-            <h2>Positions</h2>
-            <p>Here are some quick descriptions of the positions I have had (or currently have). You can find in-depth position descriptions on my <a href="http://www.linkedin.com/in/haydenwagner" target="_blank">LinkedIn profile <!--<img src="../../assets/In-Black-28px-R.png"/>-->
-            </a>.</p>
-            <div class="card card-position" *ngFor="let p of positions">
-                <div class="card-header text-white">
-                    <h3 class="card-title">{{p.name}} <span *ngIf="p.current" class="badge float-right">Current</span></h3>
-                    <p class="details">{{p.company}}, {{p.location}}</p>
-                    <p class="details">{{p.timeFrame}}</p>
+            <div>
+                <div class="post-style post-style-text">
+                <h2>Positions</h2>
+                    <p>Here are some quick descriptions of the positions I have had (or currently have). You can find in-depth position descriptions on my <a href="http://www.linkedin.com/in/haydenwagner" target="_blank">LinkedIn profile</a>.</p>
                 </div>
-                <div class="card-block">
-                    <p *ngFor="let para of p.description" class="card-text">{{para}}</p>
-                </div>
-                <div *ngIf="p.postLinks.length > 0" class="card-block">
-                    <h5>Related posts</h5>
-                    <a *ngFor="let link of p.postLinks" class="card-link" [routerLink]="['/post', link]">{{link}}</a>
+                <div class="card card-position" *ngFor="let p of positions">
+                    <div class="card-header text-white">
+                        <h3 class="card-title">{{p.name}} <span *ngIf="p.current" class="badge float-right">Current</span></h3>
+                        <p class="details">{{p.company}}, {{p.location}}</p>
+                        <p class="details">{{p.timeFrame}}</p>
+                    </div>
+                    <div class="card-block">
+                        <p *ngFor="let para of p.description" class="card-text">{{para}}</p>
+                    </div>
+                    <div *ngIf="p.postLinks.length > 0" class="card-block">
+                        <h5>Related posts</h5>
+                        <a *ngFor="let link of p.postLinks" class="card-link" [routerLink]="['/post', link]">{{link}}</a>
+                    </div>
                 </div>
             </div>
         </div>

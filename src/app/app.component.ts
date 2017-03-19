@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
+
 import {
   Event as RouterEvent,
   NavigationStart,
@@ -12,7 +13,7 @@ import {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   loading: boolean = true;

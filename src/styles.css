@@ -571,3 +571,9 @@ body {
 
 .post-style li {
   margin: .5em 0; }
+
+.post-style-text h1, .post-style-text h2, .post-style-text .h1, .post-style-text .h2 {
+  margin: 0 0 2rem; }
+
+.post-style-text h3, .post-style-text .h3 {
+  margin: 0 0 2rem; }

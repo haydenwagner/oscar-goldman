@@ -3,12 +3,16 @@
 // Import your custom theme
 @import '../../theme.scss';
 
+.lead-top{
+  max-width: 650px;
+}
+
 #about-elements{
   margin: 2rem auto;
 }
 
 .card{
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   .card-title{
     margin:0 0 .75rem 0;

@@ -36,11 +36,15 @@
   }
 
   #image-self{
-    text-align:center;
+    //text-align:center;
 
     // Medium devices (tablets, less than 992px)
     @include media-breakpoint-down (md) {
       margin: 0 0 1rem;
+    }
+
+    @include media-breakpoint-down (sm) {
+      text-align: center;
     }
 
     img {

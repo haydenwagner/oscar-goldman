@@ -1,11 +1,12 @@
 <app-splash></app-splash>
+
 <posts-page></posts-page>
 <div class="container">
-    <div class="col-lg-8 offset-lg-2">
-        <div class="alert alert-info site-note" role="alert">
-            <h3 class="alert-heading text-center">Site note</h3>
-            <hr>
-            <p *ngFor="let p of siteNoteParagraphs" [innerHTML]="p"></p>
-        </div>
+    <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1" id="site-note-container">
+            <div class="alert alert-info site-note" role="alert">
+                <h3 class="alert-heading text-center">Site note</h3>
+                <hr>
+                <p *ngFor="let p of siteNoteParagraphs" [innerHTML]="p"></p>
+            </div>
     </div>
 </div>

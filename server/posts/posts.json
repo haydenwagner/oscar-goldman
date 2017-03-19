@@ -58,7 +58,7 @@
   },
   {
     "id":"7",
-    "cardImage":"../assets/temp/images/4/ipad2.jpg",
+    "cardImage":"../assets/temp/images/7/card-image.jpg",
     "title": "D3 data-binding and selections",
     "author": "Hayden",
     "preview": "An interactive visual showing a few key concepts of the JS visualization library D3.js",
