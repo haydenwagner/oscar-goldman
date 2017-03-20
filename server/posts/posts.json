@@ -33,7 +33,7 @@
     "cardImage":"../assets/temp/images/4/card_image.jpg",
     "title": "School of Media Sciences app",
     "author": "Hayden",
-    "preview": "A digital publishing app made with a beta Adobe publishing framework.",
+    "preview": "A digital publishing app made with a beta Adobe publishing framework",
     "pubDate": "1/26/17",
     "mainPoints": [
       "I worked on this project over a ten week period with another student; we were advised by two of our professors from our program",
@@ -69,6 +69,37 @@
     ],
     "url":"d3-data-bind-selections",
     "mdFileID":"a7"
+  },
+  {
+    "id":"8",
+    "cardImage":"../assets/temp/images/8/card-image.jpg",
+    "title": "Color science lab app",
+    "author": "Hayden",
+    "preview": "A JavaScript and D3.js application that models a color science process for online students",
+    "pubDate": "3/12/17",
+    "mainPoints": [
+      "This application uses D3.js to animate screen elements that model a color reading instrument and color samples",
+      "Users can go through the processes of calibrating the instrument, reading samples and viewing the output, and downloading the generated data as a CSV",
+      "The goal of the project was to give online students an opportunity to witness and interact with this real-life color science process"
+    ],
+    "url":"color-science-lab-app",
+    "mdFileID":"a8"
+  },
+  {
+    "id":"9",
+    "cardImage":"../assets/temp/images/9/card-image.jpg",
+    "title": "Task request form integrated with Asana",
+    "author": "Hayden",
+    "preview": "An application that improves the efficiency of a task submission and management system",
+    "pubDate": "3/19/17",
+    "mainPoints": [
+      "The front-end of this app is a form that is customized to the many different task request types",
+      "The form allows users and workers to quickly submit detailed task requests",
+      "The front-end of the application is built primarily with HTML, JavaScript, jQuery, and Bootstrap",
+      "The back-end of this application uses Node.js, Express.js, and Socket.io to integrate with Asana's API"
+    ],
+    "url":"task-request-form",
+    "mdFileID":"a9"
   }
 ]
 
