@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <title>Visualization: D3 data-binding and selections</title>
+        <style type="text/css">html {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: block; }
+
+body {
+  margin: 0; }
+
+.hw {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  height: 300px;
+  position: relative;
+  display: block; }
+  .hw div.hw-data,
+  .hw div.hw-vis {
+    width: 50%;
+    height: 100%;
+    float: left; }
+  .hw circle {
+    stroke-width: .5px;
+    stroke: #cecece; }
+  .hw .hw-buttons {
+    text-align: center; }
+    .hw .hw-buttons .btn {
+      display: inline-block;
+      padding: 6px 12px;
+      margin-top: 5px;
+      margin-bottom: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.42857143;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background-image: none;
+      border: 1px solid transparent;
+      border-radius: 4px; }
+      .hw .hw-buttons .btn-enter {
+        color: #fff;
+        background-color: #5cb85c;
+        border-color: #4cae4c; }
+        .hw .hw-buttons .btn-enter:hover {
+          color: #fff;
+          background-color: #449d44;
+          border-color: #398439; }
+      .hw .hw-buttons .btn-exit {
+        color: #fff;
+        background-color: #d9534f;
+        border-color: #d43f3a; }
+        .hw .hw-buttons .btn-exit:hover {
+          color: #fff;
+          background-color: #c9302c;
+          border-color: #ac2925; }
+      .hw .hw-buttons .btn-update {
+        color: #fff;
+        background-color: #5bc0de;
+        border-color: #46b8da; }
+        .hw .hw-buttons .btn-update:hover {
+          color: #fff;
+          background-color: #31b0d5;
+          border-color: #269abc; }
+  .hw .hw-data {
+    background: #c5c5c5;
+    overflow: auto; }
+    .hw .hw-data p {
+      font-family: "Lucida Console", Monaco, monospace;
+      font-size: 12px;
+      margin: 10px 0 0 10px;
+      float: left; }
+  @media screen and (max-width: 750px) {
+    .hw div {
+      width: 100%;
+      float: none; } }
+</style>
+
+        <script src="http://d3js.org/d3.v4.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.js"></script>
+    </head>
+
+    <body>
+        <div class="hw">
+            <div class="hw-data"></div>
+            <div class="hw-vis"></div>
+            <div class="hw-buttons">
+                <button class="btn btn-enter" id="enter">Enter</button>
+                <button class="btn btn-update" id="update">Update</button>
+                <button class="btn btn-exit" id="exit">Exit</button>
+            </div>
+        </div>
+    </body>
+
+    <script>var containerWidth = d3.select(".hw-vis").style('width');
+var containerHeight = d3.select(".hw-vis").style('height');
+var pointPadding = 20;
+var mainData = [];
+var dataDiv = d3.select('.hw-data');
+
+var svg = d3.select('.hw-vis').append('svg')
+    .attr('width', containerWidth)
+    .attr('height', containerHeight)
+    .style('background', 'gray');
+
+var g = svg.append('g')
+    .attr('class','vis');
+
+///////////
+
+//add button listeners
+d3.select('#enter').on('click', enterData);
+d3.select('#update').on('click', updateData);
+d3.select('#exit').on('click', exitData);
+
+//make two random points and add to data
+mainData.push(getRandomPoint(), getRandomPoint());
+
+//update vis to reflect 2 newly added points
+updateOrEnter();
+
+////////////
+
+function enterData(){
+    mainData.push(getRandomPoint());
+    updateOrEnter();
+}
+
+function updateData(){
+    updateOrEnter(getRandomDataPoint(true));
+}
+
+function exitData(){
+    exit( getRandomDataPoint() );
+}
+
+////d3 selection functions
+
+/**
+ * Used when data enters or is updated within the main data array, and handles
+ * the d3 enter and update selections for the text and circle elements in the visualization
+ * @param updatedIndex {number} Index of an updated data point, used to selectively
+ * apply styles and transitions to only visual elements whose data has been updated.
+ */
+function updateOrEnter(updatedIndex){
+    var data = mainData;
+
+    var textSelection = dataDiv.selectAll('p:not(.exiting)').data(data),
+        circleSelection = g.selectAll('circle:not(.exiting)').data(data);
+
+    //text update
+    textSelection
+        .text(function(d){return handleText(d);})
+        .filter(function(d,i){
+            return i === updatedIndex;
+        })
+        .interrupt()
+        .style('color', '#31b0d5')
+        .transition()
+        .delay(500)
+        .duration(250)
+        .style('color', 'black');
+
+    //text enter
+    textSelection.enter()
+        .append('p')
+        .text(function(d){return handleText(d);})
+        .style('color', '#449d44')
+        .transition()
+        .delay(500)
+        .duration(250)
+        .style('color', 'black');
+
+    //circle update
+    circleSelection
+        .filter(function(d,i){
+            return i === updatedIndex;
+        })
+        .interrupt()
+        .attr('fill', '#5bc0de')
+        .transition()
+        .duration(500)
+        .attr('cx', function(d){return d[0];})
+        .attr('cy', function(d){ return d[1];})
+        .on('end', function () {
+            d3.select(this)
+                .transition()
+                .duration(250)
+                .attr('fill','black');
+        });
+
+    //circle enter
+    circleSelection.enter()
+        .append('circle')
+        .attr('cx', -10)
+        .attr('cy', function(d){ return d[1];})
+        .attr('r', 5)
+        .attr('fill', '#5cb85c')
+        .transition()
+        .duration(500)
+        .attr('cx', function(d){return d[0];})
+        .on('end', function(){
+            d3.select(this).transition()
+                .duration(250)
+                .attr('fill', 'black');
+        });
+}
+
+
+/**
+ * Used when data is deleted to exit the text and circle elements. Handles
+ * the d3 exit selection. Selections have additional class applied to them
+ * when they start their exiting process so they are not selected on subsequent
+ * calls of this function.
+ * @param removedIndex {number}
+ */
+function exit(removedIndex){
+    //make selections before deleting element
+    var data = mainData;
+    var textSelection = dataDiv.selectAll('p:not(.exiting)').data(data),
+        circleSelection = g.selectAll('circle:not(.exiting)').data(data);
+
+    //delete the removed object from the data
+    mainData.splice(removedIndex, 1);
+
+    //text exit
+    textSelection.filter(function(d,i){
+            return i === removedIndex;
+        })
+        .interrupt()
+        .classed("exiting", true)
+        .style('color', '#c9302c')
+        .transition()
+        .duration(350)
+        .on('end', function () {
+            d3.select(this).remove();
+        });
+
+    //circle exit
+    circleSelection.filter(function(d,i){
+            return i === removedIndex;
+        })
+        .interrupt()
+        .classed("exiting", true)
+        .attr('fill', '#d9534f')
+        .transition()
+        .duration(500)
+        .attr('cx', parseFloat(containerWidth) + 30)
+        .on('end', function () {
+            d3.select(this).remove();
+        });
+}
+
+//////////util functions
+
+/**
+ * Returns a random number between min (inclusive) and max (exclusive)
+ * @param min {number} minimum for random number including this number
+ * @param max {number} maximum for random number excluding this number
+ * @returns {number} random num between the passed min and max
+ */
+function getRand(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+/**
+ * Makes and returns a set of random coordinates inside the container
+ * @returns {object} array of random coordinates
+ */
+function getRandomPoint(){
+    var p = pointPadding;
+    var w = parseFloat(containerWidth) - p;
+    var h = parseFloat(containerHeight) - p;
+
+    return [getRand(p,w), getRand(p,h)];
+}
+
+/**
+ * Turns the d3 data into a string so the user can view the data that
+ * is driving the visual elements
+ * @param d {string} Data point that we need get the coordinates from to show user
+ * @returns {string} String of the coordinates for this data point
+ */
+function handleText(d){
+    var wP = Math.floor(d[0]).toString();
+    var hP = Math.floor(d[1]).toString();
+
+    if(wP.length < 3){
+        wP = (' ' + wP);
+    }
+
+    if(hP.length < 3){
+        hP = (' ' + hP);
+    }
+
+    return ( '[' + wP + ',' + hP + ']' );
+}
+
+/**
+ * Randomly chooses a random data point and returns its index in the main data array,
+ * also an option to change the value of that data point before returning the index.
+ * @param updateData {boolean} Whether to change the value of the data point
+ * @returns {number} Index of randomly chosen data point
+ */
+function getRandomDataPoint(updateData){
+    if(mainData.length === 0){
+        console.log('no points to update or exit');
+        return;
+    }
+
+    var dataPointIndex = Math.floor( getRand(0, mainData.length) );
+
+    //for updating the randomly chosen data point
+    if(updateData){
+        mainData[dataPointIndex] = getRandomPoint();
+    }
+
+    return dataPointIndex;
+}
+
+//only if you want to get wild
+// for(var i = 0; i < 500; i++){
+//    enterData();
+// }
+</script>
+</html>
+
+
