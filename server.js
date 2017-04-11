@@ -16,7 +16,7 @@ app.use('/api', api);
 
 app.get('*', (req, res) => {
     console.log(__dirname);
-  res.sendFile('./dist/index.html');
+  res.sendFile('dist/index.html', {root: __dirname});
 });
 
 const port = process.env.PORT || '3000';
