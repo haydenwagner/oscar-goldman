@@ -22,6 +22,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { SafePipe } from './safe.pipe';
 import { AboutComponent } from './about/about.component';
 
+import { ExpansionPanelsModule } from 'ng2-expansion-panels';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +44,8 @@ import { AboutComponent } from './about/about.component';
     MaterialModule.forRoot(),
     NgbModule.forRoot(),
     AppRoutingModule,
-    NavbarModule
+    NavbarModule,
+      ExpansionPanelsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

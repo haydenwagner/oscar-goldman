@@ -30,7 +30,7 @@
             <div>
                 <div class="post-style post-style-text">
                 <h2>Positions</h2>
-                    <p>Here are some quick descriptions of the positions I have had (or currently have). You can find in-depth position descriptions on my <a href="http://www.linkedin.com/in/haydenwagner" target="_blank">LinkedIn profile</a>.</p>
+                    <!--<p>Here are some quick descriptions of the positions I have had (or currently have). You can find in-depth position descriptions on my <a href="http://www.linkedin.com/in/haydenwagner" target="_blank">LinkedIn profile</a>.</p>-->
                 </div>
                 <div class="card card-position" *ngFor="let p of positions">
                     <div class="card-header text-white">
@@ -38,13 +38,36 @@
                         <p class="details">{{p.company}}, {{p.location}}</p>
                         <p class="details">{{p.timeFrame}}</p>
                     </div>
-                    <div class="card-block">
-                        <p *ngFor="let para of p.description" class="card-text">{{para}}</p>
-                    </div>
+
                     <div *ngIf="p.postLinks.length > 0" class="card-block">
                         <h5>Related posts</h5>
                         <a *ngFor="let link of p.postLinks" class="card-link" [routerLink]="['/post', link]">{{link}}</a>
                     </div>
+
+                    <expansion-panels-container class="hayden-expansion">
+                        <expansion-panel #panel>
+                            <expansion-panel-title>
+                                Description
+                            </expansion-panel-title>
+
+                            <expansion-panel-description-hidden>
+                                Show
+                            </expansion-panel-description-hidden>
+
+                            <expansion-panel-description-toggled>
+                                Hide
+                            </expansion-panel-description-toggled>
+
+                                <expansion-panel-content>
+                                    <p *ngFor="let para of p.description" class="card-text">{{para}}</p>
+                                </expansion-panel-content>
+                        </expansion-panel>
+                    </expansion-panels-container>
+
+                    <!--<div class="card-block">-->
+                        <!--<p *ngFor="let para of p.description" class="card-text">{{para}}</p>-->
+                    <!--</div>-->
+
                 </div>
             </div>
         </div>
