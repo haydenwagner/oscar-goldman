@@ -15,6 +15,7 @@ app.use(express.static('./dist'));
 app.use('/api', api);
 
 app.get('*', (req, res) => {
+    console.log(__dirname);
   res.sendFile('./dist/index.html');
 });
 
