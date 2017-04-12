@@ -13,8 +13,8 @@ export class PostService {
 
   constructor(private http: Http) { }
 
-    private postsUrl = 'http://www.haydenwagner.com/api/posts';
-    private postUrl = 'http://www.haydenwagner.com/api/post/';
+    private postsUrl = 'https://www.haydenwagner.com/api/posts';
+    private postUrl = 'https://www.haydenwagner.com/api/post/';
 
     //Fetch all existing posts
     getPosts(){
