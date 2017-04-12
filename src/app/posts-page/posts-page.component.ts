@@ -11,7 +11,7 @@ import { PostService } from '../posts.service';
   providers: [PostService]
 })
 export class PostsPageComponent implements OnInit {
-  posts: Post[];
+  posts;
   isPostsRoute: Boolean;
 
   constructor(
@@ -27,16 +27,13 @@ export class PostsPageComponent implements OnInit {
     if(this.route.snapshot.url.length > 0){
       this.isPostsRoute = this.route.snapshot.url[0].path === "posts" ? true : false;
     }
-    this.getPosts();
-    //   .subscribe(data => {
-    //   console.log(data);
-    //   //this.getPost( params['id'] );
-    // })
+
+    if(!this.posts) this.getPosts();
   }
 
   getPosts(): void{
-    this.postService.getPosts().subscribe(posts => this.posts = posts.reverse());
-    //this.posts = this.postService.getPosts().reverse();
+    this.postService.getPosts().subscribe(res=> {
+        this.posts = res.reverse();
+    });
   }
-
 }
