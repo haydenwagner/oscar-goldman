@@ -1,3 +1,5 @@
+//todo...take 'post' usage out...have it be article or something..confusing on server
+
 //https://scotch.io/tutorials/mean-app-with-angular-2-and-the-angular-cli
 // ^check this after getting mongodb working
 // ctrl+f 'server/routes/api.js
@@ -31,15 +33,24 @@ marked.setOptions({
 
 //This is bad...in future this should happen once when a new MD file is posted. Then the text
 //file of the converted MD file should be saved on the server
-posts.forEach(function(p){
-  if(p.mdFileID){
-    fs.readFile(path.resolve(__dirname,'../_markdown/' + p.mdFileID + '.md'), (err, data) => {
-      if(err) throw err;
-      //p.markdown = md(data.toString());
-      p.markdown = marked(data.toString());
+// posts.forEach(function(p){
+//   if(p.mdFileID){
+//     fs.readFile(path.resolve(__dirname,'../_markdown/' + p.mdFileID + '.md'), (err, data) => {
+//       if(err) throw err;
+//       //p.markdown = md(data.toString());
+//       p.markdown = marked(data.toString());
+//     })
+//   }
+// });
+function addMarkdownContent(post, cb){
+    fs.readFile(path.resolve(__dirname,'../_markdown/' + post.mdFileID + '.md'), (err, data) => {
+        if(err) cb(err, post);
+        else{
+            post.markdown = marked(data.toString());
+            cb(null, post);
+        }
     })
-  }
-});
+}
 
 router.get('/', (req, res) => {
   console.log(res);
@@ -59,7 +70,19 @@ router.get('/post/:post_url', (req, res) => {
   let post = getPost(req.params.post_url);
 
   if(post){
-    res.status(200).json(post);
+    try {
+        post.markdown = addMarkdownContent(post, sendRes);
+    }catch(e){
+        console.error(e);
+    }
+    function sendRes(err,post){
+        if(err) {
+            res.status(500);
+            throw err;
+        }
+        else
+            res.status(200).json(post);
+    }
   }
   else{
     res.status(404);
@@ -73,9 +96,6 @@ module.exports = router;
 function getPost(post_url){
   if(posts){
     return posts.filter(post => {
-      console.log(typeof post_url);
-      console.log(typeof post.url);
-      console.log(post.url === post_url);
       return post.url === post_url;
     })[0];
   }
