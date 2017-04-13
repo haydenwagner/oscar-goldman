@@ -29,6 +29,8 @@ marked.setOptions({
   }
 });
 
+//This is bad...in future this should happen once when a new MD file is posted. Then the text
+//file of the converted MD file should be saved on the server
 posts.forEach(function(p){
   if(p.mdFileID){
     fs.readFile(path.resolve(__dirname,'../_markdown/' + p.mdFileID + '.md'), (err, data) => {
@@ -41,7 +43,7 @@ posts.forEach(function(p){
 
 router.get('/', (req, res) => {
   console.log(res);
-    res.send('api works');
+    res.sendFile('public/api.html', {root: __dirname + '/../'});
 });
 
 //get all posts
