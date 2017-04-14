@@ -39,10 +39,7 @@
                         <p class="details">{{p.timeFrame}}</p>
                     </div>
 
-                    <div *ngIf="p.postLinks.length > 0" class="card-block">
-                        <h5>Related posts</h5>
-                        <a *ngFor="let link of p.postLinks" class="card-link" [routerLink]="['/post', link]">{{link}}</a>
-                    </div>
+
 
                     <expansion-panels-container class="hayden-expansion">
                         <expansion-panel #panel>
@@ -58,11 +55,16 @@
                                 Hide
                             </expansion-panel-description-toggled>
 
-                                <expansion-panel-content>
+                                <expansion-panel-content class="hayden">
                                     <p *ngFor="let para of p.description" class="card-text">{{para}}</p>
                                 </expansion-panel-content>
                         </expansion-panel>
                     </expansion-panels-container>
+
+                    <div *ngIf="p.postLinks.length > 0" class="card-block">
+                        <h5>Related posts</h5>
+                        <a *ngFor="let link of p.postLinks" class="card-link" [routerLink]="['/post', link]">{{link}}</a>
+                    </div>
 
                     <!--<div class="card-block">-->
                         <!--<p *ngFor="let para of p.description" class="card-text">{{para}}</p>-->
