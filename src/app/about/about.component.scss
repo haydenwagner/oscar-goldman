@@ -46,6 +46,14 @@
   text-align: right !important;
 }
 
+:host /deep/ .expansion-panel__header{
+  background: #f9f9f9 !important;
+
+  &:hover{
+    background: #eeeeee !important;
+  }
+}
+
 :host /deep/ .expansion-panel__content{
   margin-left: 0 !important;
   padding: 14px 18px !important;
